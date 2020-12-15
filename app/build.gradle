@@ -19,7 +19,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", '"your base url"'
+        }
         release {
+            buildConfigField "String", "BASE_URL", '"your base url"'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -51,6 +55,7 @@ android {
 
 dependencies {
 
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     def androidxActivity = '1.1.0'
     def androidxFragment = '1.2.2'
     def androidxLifecycle = '2.2.0'
